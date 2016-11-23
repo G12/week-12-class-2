@@ -12,6 +12,7 @@ if padding is added.
 
 body {
     font-family: "Arial", sans-serif;
+    color: #666;
     font-size: 1rem;
 }
 
@@ -31,7 +32,7 @@ fieldset {
 }
 
 legend {
-    border: 1px solid #CCC;
+    /*border: 1px solid #666;*/
     padding: 0.5rem 2rem;
     font-weight: bold;
     font-size: 1.618rem;
@@ -60,6 +61,7 @@ textarea,
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #CCC;
+    border-bottom: 5px solid #CCC;
     font-size: 1rem;
 }
 
@@ -85,6 +87,7 @@ input:focus, textarea:focus {
     background-color: #444;
     color: #FFF;
     border: 1px solid #000;
+    border-bottom: 5px solid #CCC;
 }
 
 
