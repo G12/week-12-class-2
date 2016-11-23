@@ -1,0 +1,163 @@
+/* --
+MOBILE-FIRST DEFAULT STYLE:
+-- */
+
+/* -- 
+Prevent expanding HTML containers 
+if padding is added.      
+-- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    font-size: 1rem;
+}
+
+/* -- 
+Set the maximum width for form element 
+and set it in the middle of view-port
+-- */
+form {
+    min-width: 30rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 1px solid #CCC;
+    padding: 1rem;
+}
+
+legend {
+    border: 1px solid #CCC;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    font-size: 1.618rem;
+}
+
+.form-box {
+    padding: 0.5rem;
+}
+
+/* --
+Set the labels of text-fields as
+block-level elements
+-- */
+.text-inputs label {
+    display: block;
+}
+
+/* -- 
+Set the full widths for text-fields,
+drop-down menu, textarea and submit button
+-- */
+.text-inputs input, 
+.btn-inputs select,
+textarea,
+#send-data {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #CCC;
+    font-size: 1rem;
+}
+
+#send-data {
+    border: 1px solid cornflowerblue;
+    background-color: cornflowerblue;
+    color: white;
+    cursor: pointer;
+}
+
+#send-data:hover {
+    border: 1px solid #444;
+    background-color: #444;
+    color: white;
+}
+
+
+/* -- 
+Change the style of active
+text-field or textarea element
+-- */
+input:focus, textarea:focus {
+    background-color: #444;
+    color: #FFF;
+    border: 1px solid #000;
+}
+
+
+
+/* -- 
+TABLET VIEW-PORT:
+-- */
+@media screen and (min-width: 45rem) {
+    
+    fieldset {
+        /* -- 
+        Use padding to make the same distance from 
+        left and right side of fieldset to the form
+        elements.
+        -- */
+        padding: 1rem 85px 1rem 1rem;
+    }
+    
+    .text-inputs:first-of-type, 
+    .btn-inputs {       
+        /* -- 
+        Set the first .text-inputs div
+        and .btn-inputs div in 2-column-layout
+        -- */
+        width: 50%;
+        float: left;
+    }
+    
+    .text-inputs:first-of-type {
+        /* -- 
+        This will align right all labels and inputs
+        -- */
+        text-align: right;
+    }
+    
+    .text-inputs:first-of-type label {
+        display: inline;  
+        /* -- 
+        Find out the length of the longest label
+        and set that as the width for all labels
+        -- */
+        width: 85px;
+    }
+    
+    .text-inputs:first-of-type input {
+        /* -- 
+        Input will take the rest of the width
+        that is left after the width of label is subtracted
+        -- */
+        width: calc(100% - 85px);
+    }
+    
+    .btn-inputs + .text-inputs {
+        /* -- 
+        Clear the floats of .text-inputs:first-of-type div and
+        .btn-inputs div on the third div (containing textarea)
+        -- */
+        clear: both;
+        text-align: right;
+    }
+    
+    .btn-inputs + .text-inputs label {
+        display: inline;
+        width: 85px;
+        vertical-align: top;
+    }
+    
+    .btn-inputs + .text-inputs textarea {
+        width: calc(100% - 85px);
+    }
+    
+    #send-data { 
+        width: 25%;
+        margin: 0 0 0 85px;
+    }
+}
