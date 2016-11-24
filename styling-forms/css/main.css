@@ -28,11 +28,15 @@ form {
 
 fieldset {
     border: 1px solid #CCC;
+    border-radius: 3px;
     padding: 1rem;
+    background-color: #EEE;
 }
 
 legend {
-    /*border: 1px solid #666;*/
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    background-color: #FFF;
     padding: 0.5rem 2rem;
     font-weight: bold;
     font-size: 1.618rem;
@@ -47,7 +51,7 @@ Set the labels of text-fields as
 block-level elements
 -- */
 .text-inputs label {
-    display: block;
+    display: none;
 }
 
 /* -- 
@@ -61,7 +65,7 @@ textarea,
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #CCC;
-    border-bottom: 5px solid #CCC;
+    border-radius: 3px;
     font-size: 1rem;
 }
 
@@ -70,25 +74,29 @@ textarea,
     background-color: cornflowerblue;
     color: white;
     cursor: pointer;
+    transition: background-color 200ms ease-in, 
+                color 200ms ease-in;
+;
 }
 
 #send-data:hover {
     border: 1px solid #444;
     background-color: #444;
-    color: white;
+    color: #EEE;
 }
 
 
 /* -- 
-Change the style of active
-text-field or textarea element
+You can change the style of active
+text-field or textarea element:
 -- */
+/*
 input:focus, textarea:focus {
     background-color: #444;
     color: #FFF;
     border: 1px solid #000;
-    border-bottom: 5px solid #CCC;
-}
+} 
+*/
 
 
 
@@ -104,6 +112,10 @@ TABLET VIEW-PORT:
         elements.
         -- */
         padding: 1rem 85px 1rem 1rem;
+    }
+    
+    .text-inputs label {
+        display: block;
     }
     
     .text-inputs:first-of-type, 
@@ -162,5 +174,27 @@ TABLET VIEW-PORT:
     #send-data { 
         width: 25%;
         margin: 0 0 0 85px;
+    }
+    
+    
+    /* -- 
+    Style placeholder.
+    Reference: http://blog.teamtreehouse.com/the-css3-placeholder-pseudo-element
+    -- */
+    input::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder{
+        color: white;
+    }
+    input::-moz-placeholder,
+    textarea::-moz-placeholder {
+        color: white;
+    }
+    input:-moz-placeholder,
+    textarea:-moz-placeholder {   /* -- Older versions of Firefox -- */
+        color: white;
+    }
+    input:-ms-input-placeholder,
+    textarea:-ms-input-placeholder { 
+        color: white;
     }
 }
