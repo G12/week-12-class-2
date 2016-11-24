@@ -76,7 +76,6 @@ textarea,
     cursor: pointer;
     transition: background-color 200ms ease-in, 
                 color 200ms ease-in;
-;
 }
 
 #send-data:hover {
